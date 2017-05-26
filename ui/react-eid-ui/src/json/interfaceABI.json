@@ -1,0 +1,105 @@
+[{
+    "constant": true,
+    "inputs": [],
+    "name": "getEIDCheckCost",
+    "outputs": [{
+        "name": "",
+        "type": "uint256"
+    }],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": true,
+    "inputs": [],
+    "name": "logic_",
+    "outputs": [{
+        "name": "",
+        "type": "address"
+    }],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": true,
+    "inputs": [],
+    "name": "connector_",
+    "outputs": [{
+        "name": "",
+        "type": "address"
+    }],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "_linked",
+        "type": "address"
+    }],
+    "name": "retryFailedCallback",
+    "outputs": [],
+    "payable": true,
+    "type": "function"
+}, {
+    "constant": true,
+    "inputs": [],
+    "name": "getEIDCheckCostWithSHA1",
+    "outputs": [{
+        "name": "",
+        "type": "uint256"
+    }],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "_user",
+        "type": "address"
+    }],
+    "name": "requestOCSPCheck",
+    "outputs": [],
+    "payable": true,
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "_crt",
+        "type": "bytes"
+    }, {
+        "name": "_sig",
+        "type": "bytes"
+    }],
+    "name": "linkEID",
+    "outputs": [],
+    "payable": true,
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [],
+    "name": "revokeOwnAddress",
+    "outputs": [],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": true,
+    "inputs": [],
+    "name": "oracle_",
+    "outputs": [{
+        "name": "",
+        "type": "address"
+    }],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [],
+    "name": "retryFailedCallback",
+    "outputs": [],
+    "payable": true,
+    "type": "function"
+}, {
+    "inputs": [{
+        "name": "_connector",
+        "type": "address"
+    }],
+    "payable": false,
+    "type": "constructor"
+}]

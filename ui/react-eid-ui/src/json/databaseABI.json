@@ -1,0 +1,449 @@
+[{
+    "constant": true,
+    "inputs": [{
+        "name": "_address",
+        "type": "address"
+    }],
+    "name": "isValidatedEID",
+    "outputs": [{
+        "name": "valid",
+        "type": "bool"
+    }],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [],
+    "name": "selfDirectRevokeEID",
+    "outputs": [],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "_address",
+        "type": "address"
+    }],
+    "name": "pipeCommonNameEID",
+    "outputs": [{
+        "name": "",
+        "type": "bool"
+    }],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": true,
+    "inputs": [],
+    "name": "logic_",
+    "outputs": [{
+        "name": "",
+        "type": "address"
+    }],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": true,
+    "inputs": [{
+        "name": "",
+        "type": "bytes20"
+    }],
+    "name": "parentCrts_",
+    "outputs": [{
+        "name": "",
+        "type": "bytes"
+    }],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "_address",
+        "type": "address"
+    }, {
+        "name": "_hash",
+        "type": "bytes32"
+    }],
+    "name": "appendOCSPHash",
+    "outputs": [],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "_address",
+        "type": "address"
+    }],
+    "name": "pipeUsrModEID",
+    "outputs": [{
+        "name": "",
+        "type": "bool"
+    }],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "_address",
+        "type": "address"
+    }],
+    "name": "pipeCrtSigEID",
+    "outputs": [{
+        "name": "",
+        "type": "bool"
+    }],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "_address",
+        "type": "address"
+    }],
+    "name": "getHashOCSP",
+    "outputs": [{
+        "name": "",
+        "type": "bytes32"
+    }],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": true,
+    "inputs": [],
+    "name": "connector_",
+    "outputs": [{
+        "name": "",
+        "type": "address"
+    }],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "_address",
+        "type": "address"
+    }],
+    "name": "pipeUsrSigEID",
+    "outputs": [{
+        "name": "",
+        "type": "bool"
+    }],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "_address",
+        "type": "address"
+    }],
+    "name": "pipeUsrExpEID",
+    "outputs": [{
+        "name": "",
+        "type": "bool"
+    }],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "_id",
+        "type": "bytes20"
+    }],
+    "name": "removeParent",
+    "outputs": [],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "_linked",
+        "type": "address"
+    }, {
+        "name": "_level",
+        "type": "uint256"
+    }, {
+        "name": "_status",
+        "type": "bytes1"
+    }],
+    "name": "emitLinkEvent",
+    "outputs": [],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "_address",
+        "type": "address"
+    }, {
+        "name": "_hash",
+        "type": "bytes"
+    }],
+    "name": "addBodyHash",
+    "outputs": [],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "_crt",
+        "type": "bytes"
+    }],
+    "name": "pipeSigOCSP",
+    "outputs": [{
+        "name": "",
+        "type": "bool"
+    }],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": true,
+    "inputs": [{
+        "name": "_address",
+        "type": "address"
+    }],
+    "name": "eResidentValidity",
+    "outputs": [{
+        "name": "validityLevel",
+        "type": "uint8"
+    }, {
+        "name": "isRevoked",
+        "type": "bool"
+    }],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "_address",
+        "type": "address"
+    }, {
+        "name": "_sha1",
+        "type": "bytes"
+    }],
+    "name": "appendSHA1",
+    "outputs": [],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "_address",
+        "type": "address"
+    }, {
+        "name": "_commonName",
+        "type": "string"
+    }, {
+        "name": "_mod",
+        "type": "bytes"
+    }, {
+        "name": "_exp",
+        "type": "bytes"
+    }, {
+        "name": "_crtSig",
+        "type": "bytes"
+    }, {
+        "name": "_usrSig",
+        "type": "bytes"
+    }, {
+        "name": "_crtSigAlgo",
+        "type": "bytes1"
+    }, {
+        "name": "_parentId",
+        "type": "bytes20"
+    }],
+    "name": "addEID",
+    "outputs": [],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "_address",
+        "type": "address"
+    }],
+    "name": "revokeEID",
+    "outputs": [],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "_address",
+        "type": "address"
+    }, {
+        "name": "_level",
+        "type": "uint8"
+    }],
+    "name": "setValidityEID",
+    "outputs": [],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "_address",
+        "type": "address"
+    }],
+    "name": "selfRevokeEID",
+    "outputs": [],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": true,
+    "inputs": [{
+        "name": "_address",
+        "type": "address"
+    }],
+    "name": "eResident",
+    "outputs": [{
+        "name": "commonName",
+        "type": "string"
+    }, {
+        "name": "mod",
+        "type": "bytes"
+    }, {
+        "name": "exp",
+        "type": "bytes"
+    }, {
+        "name": "crtSignature",
+        "type": "bytes"
+    }, {
+        "name": "usrSignature",
+        "type": "bytes"
+    }, {
+        "name": "bodyHash",
+        "type": "bytes"
+    }, {
+        "name": "parentId",
+        "type": "bytes20"
+    }, {
+        "name": "sigAlgo",
+        "type": "bytes1"
+    }],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": true,
+    "inputs": [],
+    "name": "oracle_",
+    "outputs": [{
+        "name": "",
+        "type": "address"
+    }],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": true,
+    "inputs": [],
+    "name": "owner_",
+    "outputs": [{
+        "name": "",
+        "type": "address"
+    }],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "_id",
+        "type": "bytes20"
+    }, {
+        "name": "_modulus",
+        "type": "bytes"
+    }],
+    "name": "addParent",
+    "outputs": [],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": true,
+    "inputs": [{
+        "name": "_address",
+        "type": "address"
+    }],
+    "name": "getPublicKeyEID",
+    "outputs": [{
+        "name": "mod",
+        "type": "bytes"
+    }, {
+        "name": "exp",
+        "type": "bytes"
+    }],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "_address",
+        "type": "address"
+    }],
+    "name": "pipeHashEID",
+    "outputs": [{
+        "name": "",
+        "type": "bool"
+    }],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "_id",
+        "type": "bytes20"
+    }],
+    "name": "pipeParentMod",
+    "outputs": [{
+        "name": "",
+        "type": "bool"
+    }],
+    "payable": false,
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "_address",
+        "type": "address"
+    }],
+    "name": "getParentEID",
+    "outputs": [{
+        "name": "",
+        "type": "bytes20"
+    }],
+    "payable": false,
+    "type": "function"
+}, {
+    "inputs": [{
+        "name": "_connector",
+        "type": "address"
+    }],
+    "payable": false,
+    "type": "constructor"
+}, {
+    "anonymous": false,
+    "inputs": [{
+        "indexed": true,
+        "name": "linked",
+        "type": "address"
+    }, {
+        "indexed": false,
+        "name": "level",
+        "type": "uint256"
+    }, {
+        "indexed": false,
+        "name": "status",
+        "type": "bytes1"
+    }],
+    "name": "linkingStatus",
+    "type": "event"
+}, {
+    "anonymous": false,
+    "inputs": [{
+        "indexed": true,
+        "name": "linked",
+        "type": "address"
+    }, {
+        "indexed": false,
+        "name": "commonName",
+        "type": "string"
+    }],
+    "name": "addedEID",
+    "type": "event"
+}]

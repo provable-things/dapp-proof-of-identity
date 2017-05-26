@@ -1,0 +1,189 @@
+[{
+  "constant": true,
+  "inputs": [],
+  "name": "interface_",
+  "outputs": [{
+    "name": "",
+    "type": "address"
+  }],
+  "payable": false,
+  "type": "function"
+}, {
+  "constant": true,
+  "inputs": [],
+  "name": "walletOracle_",
+  "outputs": [{
+    "name": "",
+    "type": "address"
+  }],
+  "payable": false,
+  "type": "function"
+}, {
+  "constant": true,
+  "inputs": [],
+  "name": "database_",
+  "outputs": [{
+    "name": "",
+    "type": "address"
+  }],
+  "payable": false,
+  "type": "function"
+}, {
+  "constant": true,
+  "inputs": [],
+  "name": "coster_",
+  "outputs": [{
+    "name": "",
+    "type": "address"
+  }],
+  "payable": false,
+  "type": "function"
+}, {
+  "constant": true,
+  "inputs": [],
+  "name": "logic_",
+  "outputs": [{
+    "name": "",
+    "type": "address"
+  }],
+  "payable": false,
+  "type": "function"
+}, {
+  "constant": false,
+  "inputs": [{
+    "name": "_database",
+    "type": "address"
+  }],
+  "name": "updateDatabaseAddress",
+  "outputs": [],
+  "payable": false,
+  "type": "function"
+}, {
+  "constant": false,
+  "inputs": [{
+    "name": "_coster",
+    "type": "address"
+  }],
+  "name": "updateCosterAddress",
+  "outputs": [],
+  "payable": false,
+  "type": "function"
+}, {
+  "constant": false,
+  "inputs": [{
+    "name": "_walletOracle",
+    "type": "address"
+  }],
+  "name": "updateWalletOracleAddress",
+  "outputs": [],
+  "payable": false,
+  "type": "function"
+}, {
+  "constant": false,
+  "inputs": [{
+    "name": "_logic",
+    "type": "address"
+  }],
+  "name": "updateLogicAddress",
+  "outputs": [],
+  "payable": false,
+  "type": "function"
+}, {
+  "constant": false,
+  "inputs": [{
+    "name": "_interface",
+    "type": "address"
+  }],
+  "name": "updateInterfaceAddress",
+  "outputs": [],
+  "payable": false,
+  "type": "function"
+}, {
+  "constant": true,
+  "inputs": [],
+  "name": "oracle_",
+  "outputs": [{
+    "name": "",
+    "type": "address"
+  }],
+  "payable": false,
+  "type": "function"
+}, {
+  "constant": true,
+  "inputs": [],
+  "name": "owner_",
+  "outputs": [{
+    "name": "",
+    "type": "address"
+  }],
+  "payable": false,
+  "type": "function"
+}, {
+  "constant": false,
+  "inputs": [{
+    "name": "_oracle",
+    "type": "address"
+  }],
+  "name": "updateOracleAddress",
+  "outputs": [],
+  "payable": false,
+  "type": "function"
+}, {
+  "inputs": [],
+  "payable": false,
+  "type": "constructor"
+}, {
+  "anonymous": false,
+  "inputs": [{
+    "indexed": true,
+    "name": "addr",
+    "type": "address"
+  }],
+  "name": "LOG_updatedDatabase",
+  "type": "event"
+}, {
+  "anonymous": false,
+  "inputs": [{
+    "indexed": true,
+    "name": "addr",
+    "type": "address"
+  }],
+  "name": "LOG_updatedLogic",
+  "type": "event"
+}, {
+  "anonymous": false,
+  "inputs": [{
+    "indexed": true,
+    "name": "addr",
+    "type": "address"
+  }],
+  "name": "LOG_updatedOracle",
+  "type": "event"
+}, {
+  "anonymous": false,
+  "inputs": [{
+    "indexed": true,
+    "name": "addr",
+    "type": "address"
+  }],
+  "name": "LOG_updatedWalletOracle",
+  "type": "event"
+}, {
+  "anonymous": false,
+  "inputs": [{
+    "indexed": true,
+    "name": "addr",
+    "type": "address"
+  }],
+  "name": "LOG_updatedInterface",
+  "type": "event"
+}, {
+  "anonymous": false,
+  "inputs": [{
+    "indexed": true,
+    "name": "addr",
+    "type": "address"
+  }],
+  "name": "LOG_updatedCostEstimator",
+  "type": "event"
+}]

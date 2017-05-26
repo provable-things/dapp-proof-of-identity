@@ -1,0 +1,32 @@
+{
+  "name": "react-poi",
+  "version": "0.2.0",
+  "private": true,
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "create-hash": "^1.1.2",
+    "ethereumjs-util": "^5.1.1",
+    "history": "^4.6.1",
+    "karet": "^1.1.0",
+    "kefir": "^3.7.1",
+    "material-ui": "^0.17.1",
+    "parse-data-uri": "^0.2.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-markdown": "^2.4.6",
+    "react-notification-system": "^0.2.13",
+    "react-pure": "^0.3.1",
+    "react-tap-event-plugin": "^2.0.1",
+    "react-toolbox": "^2.0.0-beta.7",
+    "web3": "^0.18.2"
+  },
+  "devDependencies": {
+    "react-scripts": "0.9.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

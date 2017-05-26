@@ -1,0 +1,434 @@
+[{
+  "constant": true,
+  "inputs": [],
+  "name": "walletOracle_",
+  "outputs": [{
+    "name": "",
+    "type": "address"
+  }],
+  "payable": false,
+  "type": "function"
+}, {
+  "constant": true,
+  "inputs": [],
+  "name": "database_",
+  "outputs": [{
+    "name": "",
+    "type": "address"
+  }],
+  "payable": false,
+  "type": "function"
+}, {
+  "constant": true,
+  "inputs": [],
+  "name": "connector_",
+  "outputs": [{
+    "name": "",
+    "type": "address"
+  }],
+  "payable": false,
+  "type": "function"
+}, {
+  "constant": true,
+  "inputs": [{
+    "name": "_addressReceiver",
+    "type": "address"
+  }, {
+    "name": "_token",
+    "type": "address"
+  }, {
+    "name": "_value",
+    "type": "uint256"
+  }, {
+    "name": "_msg",
+    "type": "string"
+  }, {
+    "name": "_nonce",
+    "type": "uint256"
+  }],
+  "name": "getHashForTransfer",
+  "outputs": [{
+    "name": "hash",
+    "type": "bytes32"
+  }],
+  "payable": false,
+  "type": "function"
+}, {
+  "constant": false,
+  "inputs": [{
+    "name": "_crt",
+    "type": "bytes"
+  }, {
+    "name": "_signed",
+    "type": "bytes"
+  }, {
+    "name": "_signedReceiverAddress",
+    "type": "address"
+  }, {
+    "name": "_signedValue",
+    "type": "uint256"
+  }, {
+    "name": "_signedMessage",
+    "type": "string"
+  }, {
+    "name": "_signedNonce",
+    "type": "uint256"
+  }],
+  "name": "transferEtherToAddress",
+  "outputs": [],
+  "payable": false,
+  "type": "function"
+}, {
+  "constant": false,
+  "inputs": [{
+    "name": "_serial",
+    "type": "uint40"
+  }, {
+    "name": "_msg",
+    "type": "string"
+  }],
+  "name": "sendEtherToEID",
+  "outputs": [{
+    "name": "success",
+    "type": "bool"
+  }],
+  "payable": true,
+  "type": "function"
+}, {
+  "constant": true,
+  "inputs": [{
+    "name": "_serialReceiver",
+    "type": "uint40"
+  }, {
+    "name": "_token",
+    "type": "address"
+  }, {
+    "name": "_value",
+    "type": "uint256"
+  }, {
+    "name": "_msg",
+    "type": "string"
+  }, {
+    "name": "_nonce",
+    "type": "uint256"
+  }],
+  "name": "getHashForTransfer",
+  "outputs": [{
+    "name": "hash",
+    "type": "bytes32"
+  }],
+  "payable": false,
+  "type": "function"
+}, {
+  "constant": false,
+  "inputs": [{
+    "name": "_senderSerial",
+    "type": "uint40"
+  }, {
+    "name": "_addressType",
+    "type": "bool"
+  }, {
+    "name": "_receiverSerial",
+    "type": "uint40"
+  }, {
+    "name": "_receiverAddress",
+    "type": "address"
+  }, {
+    "name": "_token",
+    "type": "address"
+  }, {
+    "name": "_value",
+    "type": "uint256"
+  }, {
+    "name": "_msg",
+    "type": "string"
+  }],
+  "name": "executeDelegatedTransfer",
+  "outputs": [{
+    "name": "transferred",
+    "type": "bool"
+  }],
+  "payable": false,
+  "type": "function"
+}, {
+  "constant": true,
+  "inputs": [],
+  "name": "birthBlock_",
+  "outputs": [{
+    "name": "",
+    "type": "uint256"
+  }],
+  "payable": false,
+  "type": "function"
+}, {
+  "constant": false,
+  "inputs": [{
+    "name": "_crt",
+    "type": "bytes"
+  }, {
+    "name": "_signed",
+    "type": "bytes"
+  }, {
+    "name": "_signedToken",
+    "type": "address"
+  }, {
+    "name": "_signedReceiverSerial",
+    "type": "uint40"
+  }, {
+    "name": "_signedValue",
+    "type": "uint256"
+  }, {
+    "name": "_signedMessage",
+    "type": "string"
+  }, {
+    "name": "_signedNonce",
+    "type": "uint256"
+  }],
+  "name": "transferTokenToSerial",
+  "outputs": [],
+  "payable": false,
+  "type": "function"
+}, {
+  "constant": false,
+  "inputs": [{
+    "name": "_serial",
+    "type": "uint40"
+  }, {
+    "name": "_token",
+    "type": "address"
+  }, {
+    "name": "_amount",
+    "type": "uint256"
+  }, {
+    "name": "_msg",
+    "type": "string"
+  }],
+  "name": "sendTokensToEID",
+  "outputs": [{
+    "name": "success",
+    "type": "bool"
+  }],
+  "payable": false,
+  "type": "function"
+}, {
+  "constant": false,
+  "inputs": [{
+    "name": "_serial",
+    "type": "uint40"
+  }, {
+    "name": "_token",
+    "type": "address"
+  }, {
+    "name": "_amount",
+    "type": "uint256"
+  }],
+  "name": "sendTokensToEID",
+  "outputs": [{
+    "name": "success",
+    "type": "bool"
+  }],
+  "payable": false,
+  "type": "function"
+}, {
+  "constant": true,
+  "inputs": [{
+    "name": "",
+    "type": "uint40"
+  }],
+  "name": "balances_",
+  "outputs": [{
+    "name": "eth",
+    "type": "uint256"
+  }],
+  "payable": false,
+  "type": "function"
+}, {
+  "constant": true,
+  "inputs": [{
+    "name": "_serial",
+    "type": "uint40"
+  }],
+  "name": "getBalance",
+  "outputs": [{
+    "name": "",
+    "type": "uint256"
+  }],
+  "payable": false,
+  "type": "function"
+}, {
+  "constant": true,
+  "inputs": [{
+    "name": "_serial",
+    "type": "uint40"
+  }, {
+    "name": "_token",
+    "type": "address"
+  }],
+  "name": "getBalance",
+  "outputs": [{
+    "name": "",
+    "type": "uint256"
+  }],
+  "payable": false,
+  "type": "function"
+}, {
+  "constant": false,
+  "inputs": [{
+    "name": "_crt",
+    "type": "bytes"
+  }, {
+    "name": "_signed",
+    "type": "bytes"
+  }, {
+    "name": "_signedToken",
+    "type": "address"
+  }, {
+    "name": "_signedReceiverAddress",
+    "type": "address"
+  }, {
+    "name": "_signedValue",
+    "type": "uint256"
+  }, {
+    "name": "_signedMessage",
+    "type": "string"
+  }, {
+    "name": "_signedNonce",
+    "type": "uint256"
+  }],
+  "name": "transferTokenToAddress",
+  "outputs": [],
+  "payable": false,
+  "type": "function"
+}, {
+  "constant": false,
+  "inputs": [{
+    "name": "_serial",
+    "type": "uint40"
+  }],
+  "name": "sendEtherToEID",
+  "outputs": [{
+    "name": "success",
+    "type": "bool"
+  }],
+  "payable": true,
+  "type": "function"
+}, {
+  "constant": false,
+  "inputs": [{
+    "name": "_crt",
+    "type": "bytes"
+  }, {
+    "name": "_signed",
+    "type": "bytes"
+  }, {
+    "name": "_signedReceiverSerial",
+    "type": "uint40"
+  }, {
+    "name": "_signedValue",
+    "type": "uint256"
+  }, {
+    "name": "_signedMessage",
+    "type": "string"
+  }, {
+    "name": "_signedNonce",
+    "type": "uint256"
+  }],
+  "name": "transferEtherToSerial",
+  "outputs": [],
+  "payable": false,
+  "type": "function"
+}, {
+  "inputs": [{
+    "name": "_connector",
+    "type": "address"
+  }],
+  "payable": false,
+  "type": "constructor"
+}, {
+  "anonymous": false,
+  "inputs": [{
+    "indexed": true,
+    "name": "receiverSerial",
+    "type": "uint40"
+  }, {
+    "indexed": false,
+    "name": "senderSerial",
+    "type": "uint40"
+  }, {
+    "indexed": false,
+    "name": "senderAddress",
+    "type": "address"
+  }, {
+    "indexed": true,
+    "name": "token",
+    "type": "address"
+  }, {
+    "indexed": false,
+    "name": "amount",
+    "type": "uint256"
+  }, {
+    "indexed": false,
+    "name": "note",
+    "type": "string"
+  }, {
+    "indexed": false,
+    "name": "time",
+    "type": "uint256"
+  }],
+  "name": "LOG_receivedTransfer",
+  "type": "event"
+}, {
+  "anonymous": false,
+  "inputs": [{
+    "indexed": true,
+    "name": "senderSerial",
+    "type": "uint40"
+  }, {
+    "indexed": false,
+    "name": "receiverSerial",
+    "type": "uint40"
+  }, {
+    "indexed": false,
+    "name": "receiverAddress",
+    "type": "address"
+  }, {
+    "indexed": true,
+    "name": "token",
+    "type": "address"
+  }, {
+    "indexed": false,
+    "name": "amount",
+    "type": "uint256"
+  }, {
+    "indexed": false,
+    "name": "note",
+    "type": "string"
+  }, {
+    "indexed": false,
+    "name": "time",
+    "type": "uint256"
+  }],
+  "name": "LOG_sentTransfer",
+  "type": "event"
+}, {
+  "anonymous": false,
+  "inputs": [{
+    "indexed": true,
+    "name": "serial",
+    "type": "uint40"
+  }, {
+    "indexed": true,
+    "name": "token",
+    "type": "address"
+  }, {
+    "indexed": false,
+    "name": "amount",
+    "type": "uint256"
+  }, {
+    "indexed": false,
+    "name": "time",
+    "type": "uint256"
+  }],
+  "name": "LOG_balanceUpdate",
+  "type": "event"
+}]
