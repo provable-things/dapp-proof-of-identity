@@ -25,6 +25,7 @@ async function initInstances() {
     //window.interface = itf;
     //window.database = db;
     window.wlt = wlt;
+    window.w3 = web3;
 
     return { con, db, wlt };
 }

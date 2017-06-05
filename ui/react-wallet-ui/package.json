@@ -7,6 +7,7 @@
     "bluebird": "^3.5.0",
     "create-hash": "^1.1.2",
     "ethereumjs-util": "^5.1.1",
+    "harmony-reflect": "^1.5.1",
     "history": "^4.6.1",
     "karet": "^1.1.0",
     "kefir": "^3.7.1",
