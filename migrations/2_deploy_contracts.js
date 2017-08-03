@@ -5,7 +5,9 @@ module.exports = function (deployer) {
     }).then(function () {
         return deployer.deploy(idOracleLib);
     }).then(function () {
-        return deployer.autolink();
+        return deployer.autolink(WalletOracle);
+    }).then(function () {
+        return deployer.link(oraclizeLib, [DigitalIdCostEstimator, DigitalIdOracle]);
     }).then(function () {
         return deployer.deploy(DigitalIdCostEstimator);
     }).then(function () {

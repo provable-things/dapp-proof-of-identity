@@ -24,8 +24,6 @@ SOFTWARE.
 
 pragma solidity ^0.4.6;
 
-// TODO: Missing retry for SHA-1, if gas permits, add it in
-
 import "oraclizeLib.sol";
 import "FixedToDynamic.sol";
 import "idOracleLib.sol";
@@ -406,9 +404,13 @@ contract DigitalIdDatabase {
     returns (bool) {
         certificate_[_crtId].ocspLastTimestamp = block.timestamp;
         certificate_[_crtId].ocspLastBlock = block.number;
+        // DEBUG - Disable for production
+        certificate_[_crtId].ocspRevoked = _revoking;
+        /*
         if (_revoking == true) {
             revokeCrt(_crtId);
         }
+        */
         return true;
     }
 
@@ -1186,14 +1188,14 @@ contract DigitalIdOracle is usingFixedToDynamicLibrary {
         arr[2] = oraclizeLib.b2s(_mod);*/
         //string[] storage arr = ["Qmd3Vdr5AqFCLDqWhx8fcpQKM6FoUMMieR4cGEyNmL44hJ", base, exp, mod];
 
-        return oraclizeLib.oraclize_query("computation", ["Qmd3Vdr5AqFCLDqWhx8fcpQKM6FoUMMieR4cGEyNmL44hJ",
+        return oraclizeLib.oraclize_query("computation", ["binary(QmfFdnXLRzhiks7BRbJ3UZmc99WVYXwHissHeJSB1sxHw6).unhexlify()",
         oraclizeLib.b2s(_base), oraclizeLib.b2s(_exp), oraclizeLib.b2s(_mod)].toDynamic(), _cost);
     }
 
     function computeSHA1(bytes _body)
     private
     returns (bytes32 callback) {
-        return oraclizeLib.oraclize_query("computation", ["QmXcC622oz3oQLjH9rjVKJZLhfHUtY4Pf5rexFpRxJEvtt",
+        return oraclizeLib.oraclize_query("computation", ["binary(QmeTKU7RYZ4NpxHPKAP4oa6znp7hre1SozBtGa9qvD1L7w).unhexlify()",
         oraclizeLib.b2s(_body)].toDynamic(), execCost_[0]);
     }
 
@@ -2298,7 +2300,9 @@ contract WalletContainer is DSMath {
         (valid, revoked, ocspLastTimestamp, ocspLastBlock) = database_.getCrtStatus(crtId);
 
         if(revoked) {
-            throw;
+            //DEBUG don't throw if revoked
+            //throw;
+            onlyTrfSigValidation(_crt, crtId, _trf);
         }
         else if(valid && ocspLastTimestamp > 0) {
             onlyTrfSigValidation(_crt, crtId, _trf);

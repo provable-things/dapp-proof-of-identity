@@ -1,4 +1,5 @@
 import os
 import hashlib
+import binascii
 
-print hashlib.sha1(os.environ['ARG0'].decode('hex')).digest()
+print binascii.hexlify(hashlib.sha1(os.environ['ARG0'].decode('hex')).digest())

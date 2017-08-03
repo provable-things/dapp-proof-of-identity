@@ -57,10 +57,10 @@ library oraclizeLib {
     byte constant internal proofStorage_IPFS = 0x01;
 
     // *******TRUFFLE + BRIDGE*********
-    OraclizeAddrResolverI constant public OAR = OraclizeAddrResolverI(0x6f485C8BF6fc43eA212E93BBF8ce046C7f1cb475);
+    //OraclizeAddrResolverI constant public OAR = OraclizeAddrResolverI(0x6f485C8BF6fc43eA212E93BBF8ce046C7f1cb475);
 
     // *****REALNET DEPLOYMENT******
-    //OraclizeAddrResolverI constant public OAR = oraclize_setNetwork(); // constant means dont store and re-eval on each call
+    OraclizeAddrResolverI constant public OAR = oraclize_setNetwork(); // constant means dont store and re-eval on each call
 
     OraclizeI constant public oraclize = OraclizeI(OAR.getAddress());
 

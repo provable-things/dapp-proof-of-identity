@@ -11,7 +11,19 @@ module.exports = {
   },
   rpc: {
     host: "localhost",
-    port: 8545
+    port: 8545,
+    gas: 4700000,
+    gasPrice: 1000000000
+  },
+  networks: {
+    "main": {
+      network_id: 1,
+      gas: 6000000
+    },
+    "kovan": {
+      network_id: 42,
+      gas: 4700000
+    }
   },
   mocha: {
     bail: false

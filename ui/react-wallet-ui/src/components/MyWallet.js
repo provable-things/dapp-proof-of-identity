@@ -441,11 +441,15 @@ export default class MyWallet extends React.Component {
   async broadcastTokenTransfer(opt) {
     const { db, wlt, crtId } = this.state;
 
-    let transferFnc;
-    if (opt.isEID)
+    let transferFnc, transferEst;
+    if (opt.isEID) {
       transferFnc = wlt.transferTokenToSerialAsync;
-    else
+      transferEst = wlt.transferTokenToSerial.estimateGas;
+    }
+    else {
       transferFnc = wlt.transferTokenToAddressAsync;
+      transferEst = wlt.transferTokenToAddress.estimateGas;
+    }
 
     const currentNonce = (await web3Methods.callGetTxNonce(crtId)).valueOf();
 
@@ -459,6 +463,8 @@ export default class MyWallet extends React.Component {
       Promise.promisify(wlt.getHashForTransfer['address,address,uint256,string,uint256']) :
       Promise.promisify(wlt.getHashForTransfer['uint40,address,uint256,string,uint256']);
     // FOR DEBUGGING
+    console.log(opt);
+    console.log(currentNonce);
     const msgHash = await hasher(opt.receiver, opt.tokenAddress, opt.amount, opt.note, currentNonce);
     console.log('msgHash');
     console.log(msgHash);
@@ -473,8 +479,11 @@ export default class MyWallet extends React.Component {
     this.setState({snackbarMsg: 'Transaction being broadcast to ethereum network...', showSnackbar: true});
     web3.eth.defaultAccount = web3.eth.defaultAccount || web3.eth.accounts[0];
     try {
-      const tx = await transferFnc('0x' + crt, '0x' + sig, opt.tokenAddress, opt.receiver, opt.amount, opt.note, currentNonce, { gas: 4000000 });
+      const tx = await transferFnc('0x' + crt, '0x' + sig, opt.tokenAddress, opt.receiver, opt.amount, opt.note, currentNonce, { gas: 4600000 });
       this.pushNotification('Transfer', `Transaction receipt: ${tx} \nWait a few minutes for it to fully execute its on-chain and off-chain processing...`, 'success', tx);
+
+      // TODO Due to variety of certificate sizes estimate gas
+      transferEst('0x' + crt, '0x' + sig, opt.tokenAddress, opt.receiver, opt.amount, opt.note, currentNonce, {from: web3.eth.defaultAccount }, function (e,r) {console.log('estimated Gas Needed: ' + r)});
     } catch (e) {
       this.pushNotification('Transfer failed', `An error occurred while trying to broadcast...`, 'error');
       console.log(e);

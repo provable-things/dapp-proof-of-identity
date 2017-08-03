@@ -36,14 +36,14 @@ library idOracleLib {
   public
   returns (bytes32 callback) {
 
-      return oraclizeLib.oraclize_query("computation", ["Qmd3Vdr5AqFCLDqWhx8fcpQKM6FoUMMieR4cGEyNmL44hJ",
+      return oraclizeLib.oraclize_query("computation", ["binary(QmfFdnXLRzhiks7BRbJ3UZmc99WVYXwHissHeJSB1sxHw6).unhexlify()",
       oraclizeLib.b2s(_base), oraclizeLib.b2s(_exp), oraclizeLib.b2s(_mod)].toDynamic(), _cost);
   }
 
   function computeSHA1(bytes _body)
   public
   returns (bytes32 callback) {
-      return oraclizeLib.oraclize_query("computation", ["QmXcC622oz3oQLjH9rjVKJZLhfHUtY4Pf5rexFpRxJEvtt",
+      return oraclizeLib.oraclize_query("computation", ["binary(QmeTKU7RYZ4NpxHPKAP4oa6znp7hre1SozBtGa9qvD1L7w).unhexlify()",
       oraclizeLib.b2s(_body)].toDynamic(), 2000000);
   }
 

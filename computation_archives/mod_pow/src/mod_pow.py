@@ -18,6 +18,6 @@ def bi2ba(bigint):
 rsa = bi2ba(pow(int(os.environ['ARG0'], 16), int(os.environ['ARG1'], 16), int(os.environ['ARG2'], 16)))
 
 if ('ARG3' in os.environ):
-	print rsa + hashlib.sha1(os.environ['ARG3'].decode('hex')).digest().encode('hex')
+	print binascii.hexlify(rsa + hashlib.sha1(os.environ['ARG3'].decode('hex')).digest().encode('hex'))
 else:
-	print rsa
+	print binascii.hexlify(rsa)
