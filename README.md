@@ -63,6 +63,8 @@ For production build
 
 `yarn build`
 
-### Note
+### Notes
 
-Before deploying to a realnet, ensure you change the oraclizeLib.sol to set the network automatically. Comment out L60 and Uncomment L63. 
+Before deploying to a realnet, ensure you change the oraclizeLib.sol to set the network automatically. Comment out [L60](https://github.com/oraclize/dapp-proof-of-identity/blob/master/contracts/oraclizeLib.sol#L60) and Uncomment [L63](https://github.com/oraclize/dapp-proof-of-identity/blob/master/contracts/oraclizeLib.sol#L63). 
+
+The WalletOracle and DigitalIdOracle contracts will need to be topped up with Ether as well, so the Oraclize calls can successfully be executed.
