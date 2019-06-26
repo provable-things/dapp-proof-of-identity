@@ -1,4 +1,4 @@
-## Oraclize Proof-of-Identity Dapp + eWallet
+## Provable's Proof-of-Identity Dapp + eWallet
 
 ### Dependencies
 
@@ -35,13 +35,13 @@ Run ethereum-bridge with the following parameters
 
 `node bridge -a 49 --dev --disable-price`
 
-Finally, run the tests (note some of the sections will take several minutes to complete as they are waiting for callbacks to come in from Oraclize)
+Finally, run the tests (note some of the sections will take several minutes to complete as they are waiting for callbacks to come in from Provable)
 
 `truffle test`
 
 ### Network deployment using Truffle
 
-The contracts can be conveniently deployed on a supported Oraclize network, simply by having an unlocked account running on your local ethereum node instance. When you have a node running with open rpc access, simply run
+The contracts can be conveniently deployed on a supported Provable network, simply by having an unlocked account running on your local ethereum node instance. When you have a node running with open rpc access, simply run
 
 `truffle migrate --reset`
 
@@ -67,4 +67,4 @@ For production build
 
 Before deploying to a realnet, ensure you change the oraclizeLib.sol to set the network automatically. Comment out [L60](https://github.com/oraclize/dapp-proof-of-identity/blob/master/contracts/oraclizeLib.sol#L60) and Uncomment [L63](https://github.com/oraclize/dapp-proof-of-identity/blob/master/contracts/oraclizeLib.sol#L63). 
 
-The WalletOracle and DigitalIdOracle contracts will need to be topped up with Ether as well, so the Oraclize calls can successfully be executed.
+The WalletOracle and DigitalIdOracle contracts will need to be topped up with Ether as well, so the Provable calls can successfully be executed.
